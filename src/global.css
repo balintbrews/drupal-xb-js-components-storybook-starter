@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter Variable";
+  --font-sans--font-feature-settings: "liga" 1, "calt" 1;
+
+  --color-brand: var(--color-slate-800);
+}

@@ -1,0 +1,71 @@
+{
+  "name": "drupal-xb-js-components-storybook-template",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Storybook to build JavaScript components for Drupal's Experience Builder",
+  "type": "module",
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.1.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.0.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "@eslint/js": "^9.20.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
+    "@storybook/addon-essentials": "^8.5.5",
+    "@storybook/addon-interactions": "^8.5.5",
+    "@storybook/blocks": "^8.5.5",
+    "@storybook/react": "^8.5.5",
+    "@storybook/react-vite": "^8.5.5",
+    "@storybook/test": "^8.5.5",
+    "@tailwindcss/vite": "^4.0.6",
+    "@vitejs/plugin-react": "^4.3.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.20.1",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.15.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.5.1",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "storybook": "^8.5.5",
+    "tailwindcss": "^4.0.6",
+    "vite": "^6.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,jsx,json,html,md,mdx,yml}": "prettier --write",
+    "*.{js,jsx}": "eslint --fix"
+  },
+  "scripts": {
+    "dev": "storybook dev -p 6006 --no-open",
+    "storybook": "npm run dev",
+    "build-storybook": "storybook build",
+    "code:check": "run-s -c -n code:check:**",
+    "code:check:tsc": "tsc --noEmit",
+    "code:check:prettier": "npm run s:prettier -- --check",
+    "code:check:eslint": "npm run s:eslint",
+    "code:fix": "run-s -c -n code:fix:**",
+    "code:fix:prettier": "npm run s:prettier -- --write",
+    "code:fix:eslint": "npm run s:eslint -- --fix",
+    "s:prettier": "prettier \"**/*.{js,jsx,json,html,md,mdx,yml}\"",
+    "s:eslint": "eslint \"**/*.{js,jsx}\"",
+    "prepare": "husky"
+  }
+}
