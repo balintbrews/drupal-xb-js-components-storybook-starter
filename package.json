@@ -25,6 +25,7 @@
     "@storybook/test": "^8.5.5",
     "@tailwindcss/vite": "^4.0.6",
     "@vitejs/plugin-react": "^4.3.4",
+    "@vitejs/plugin-react-swc": "^3.8.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.20.1",
     "eslint-plugin-react-hooks": "^5.1.0",
