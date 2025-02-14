@@ -3,6 +3,7 @@ const Card = ({
   link = "#",
   status = "Not Started",
   progress = 0,
+  footer = null,
 }) => {
   const statusBadge = {
     "Not Started":
@@ -64,12 +65,11 @@ const Card = ({
           </div>
         </div>
       </div>
-      <div className="flex items-center p-6 pt-0">
-        <div className="flex w-full flex-wrap items-center justify-between gap-3 text-sm text-gray-600">
-          <span>Last updated: 2 hours ago</span>
-          <span>5 open issues</span>
+      {footer && (
+        <div className="flex items-center p-6 pt-0 text-sm text-gray-600">
+          {footer}
         </div>
-      </div>
+      )}
     </div>
   );
 };
