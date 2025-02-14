@@ -4,7 +4,7 @@ Build and test JavaScript components for
 [Drupal's Experience Builder](https://www.drupal.org/project/experience_builder)
 with this preconfigured development environment.
 
-![Screenshot](./screenshot.jpg)
+![Screenshot](./screenshot.png)
 
 Experience Builder will include an in-browser code editor for authoring
 components using React/Preact and Tailwind CSS. Compiling these components
