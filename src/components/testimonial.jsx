@@ -68,5 +68,4 @@ Testimonial.propTypes = {
 };
 
 Testimonial.displayName = "Testimonial";
-
-export { Testimonial };
+export default Testimonial;

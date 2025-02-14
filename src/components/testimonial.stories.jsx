@@ -1,4 +1,4 @@
-import { Testimonial } from "./testimonial";
+import Testimonial from "./testimonial";
 
 const meta = {
   title: "Testimonial",

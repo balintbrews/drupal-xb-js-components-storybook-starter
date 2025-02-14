@@ -1,4 +1,5 @@
 import js from "@eslint/js";
+import importPlugin from "eslint-plugin-import";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
@@ -22,6 +23,7 @@ export default [
       react,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
+      import: importPlugin,
     },
     rules: {
       ...js.configs.recommended.rules,
@@ -34,6 +36,14 @@ export default [
         "warn",
         { allowConstantExport: true },
       ],
+    },
+  },
+  {
+    files: ["**/components/**/*.{js,jsx}"],
+    ignores: ["**/components/**/*.stories.jsx"],
+    rules: {
+      "import/prefer-default-export": "error",
+      "import/no-named-export": "error",
     },
   },
 ];
