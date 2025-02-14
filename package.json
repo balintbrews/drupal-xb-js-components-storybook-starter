@@ -1,8 +1,8 @@
 {
-  "name": "drupal-xb-js-components-storybook-template",
+  "name": "drupal-xb-js-components-storybook-starter",
   "version": "0.0.0",
   "private": true,
-  "description": "Storybook to build JavaScript components for Drupal's Experience Builder",
+  "description": "Build and test JavaScript components for Drupal's Experience Builder with this preconfigured development environment.",
   "type": "module",
   "dependencies": {
     "@fontsource-variable/inter": "^5.1.1",
