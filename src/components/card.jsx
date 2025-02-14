@@ -6,18 +6,17 @@ const Card = ({
   footer = null,
 }) => {
   const statusBadge = {
-    "Not Started":
-      "bg-drupal-gray-mildest text-drupal-gray-darker ring-drupal-gray-milder",
-    "In Progress": "bg-drupal-light-blue text-drupal-navy ring-drupal-blue",
-    Completed: "bg-green-100 text-drupal-green ring-green-300",
+    "Not Started": "bg-drupal-gray-mildest text-drupal-gray-darker",
+    "In Progress": "bg-drupal-purple text-drupal-navy",
+    Completed: "bg-green-200 text-drupal-green",
   };
   return (
-    <div className="w-full max-w-md rounded-lg border border-border shadow-sm transition-all duration-300 hover:shadow-lg">
+    <div className="w-full max-w-md rounded-lg bg-primary text-white shadow-sm transition-all duration-300 hover:shadow-lg">
       <div className="flex flex-col space-y-1 p-6">
         <div className="flex w-full items-start justify-between">
           <div className="space-y-2">
             <span
-              className={`${statusBadge[status]} inline-flex items-center rounded-full border-transparent px-2 py-0.5 text-xs font-medium ring-1 ring-inset`}
+              className={`${statusBadge[status]} inline-flex items-center rounded-full border-transparent px-2 py-0.5 text-xs font-medium`}
             >
               {status}
             </span>
@@ -25,7 +24,7 @@ const Card = ({
           </div>
           <a
             href={link}
-            className="focus-visible:ring-ring inline-flex h-8 w-8 items-center justify-center rounded-md border border-border text-sm font-medium whitespace-nowrap transition-colors hover:bg-accent"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-accent text-sm font-medium whitespace-nowrap text-drupal-dark-navy transition-colors hover:bg-secondary"
             role="link"
             target="_blank"
             rel="noopener noreferrer"
@@ -40,7 +39,7 @@ const Card = ({
       <div className="p-6 pt-0">
         <div className="space-y-4">
           <div className="space-y-2">
-            <div className="flex justify-between text-sm text-gray-600">
+            <div className="flex justify-between text-sm text-drupal-gray-mildest">
               <span>Progress</span>
               <span>{progress}%</span>
             </div>
@@ -50,12 +49,12 @@ const Card = ({
               role="progressbar"
               data-state="indeterminate"
               data-max="100"
-              className="relative h-2 w-full overflow-hidden rounded-full bg-secondary"
+              className="relative h-2 w-full overflow-hidden rounded-full bg-drupal-light-blue"
             >
               <div
                 data-state="indeterminate"
                 data-max="100"
-                className="h-full w-full flex-1 bg-primary transition-all"
+                className="h-full w-full flex-1 border-r-3 border-drupal-red bg-drupal-yellow transition-all"
                 style={{ transform: `translateX(-${100 - progress}%)` }}
               ></div>
             </div>
@@ -66,7 +65,7 @@ const Card = ({
         </div>
       </div>
       {footer && (
-        <div className="flex items-center p-6 pt-0 text-sm text-gray-600">
+        <div className="flex items-center p-6 pt-0 text-sm text-drupal-gray-mildest">
           {footer}
         </div>
       )}

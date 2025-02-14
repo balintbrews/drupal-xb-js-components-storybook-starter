@@ -28,6 +28,4 @@
   --color-primary: var(--color-drupal-blue);
   --color-secondary: var(--color-drupal-gray-milder);
   --color-accent: var(--color-drupal-gray-mildest);
-  --color-background: var(--color-drupal-white);
-  --color-border: var(--color-drupal-gray-milder);
 }
