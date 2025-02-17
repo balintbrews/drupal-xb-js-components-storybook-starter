@@ -20,9 +20,10 @@ const Hero = ({
   // layout,
   preHeading,
   heading,
-  headingSize,
+  headingSize = "Large",
+  headingElement,
+  textColor = "Dark",
   text,
-  // textColor,
   button1Label,
   button1Link,
   // button1Style,
@@ -46,6 +47,8 @@ const Hero = ({
               heading={heading}
               preHeading={preHeading}
               headingSize={headingSize}
+              textColor={textColor}
+              headingElement={headingElement}
             />
           </div>
           {text && <p className="mb-4 text-lg text-slate-950">{text}</p>}

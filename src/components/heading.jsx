@@ -18,7 +18,7 @@ const preHeadingVariants = cva("mb-4 text-lg font-bold", {
   },
 });
 
-const headingVariants = cva("font-bold", {
+const headingVariants = cva("leading-[normal] font-bold", {
   variants: {
     textColor: {
       Dark: "text-black",
