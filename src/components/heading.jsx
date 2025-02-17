@@ -1,5 +1,7 @@
 import { cva } from "class-variance-authority";
 
+import { cn } from "../lib/utils";
+
 const containerVariants = cva("dark flex w-full flex-col", {
   variants: {
     layout: {
@@ -39,10 +41,11 @@ const Heading = ({
   layout = "Left aligned",
   headingSize = "Large",
   textColor = "Dark",
+  className,
 }) => {
   const Heading = headingElement;
   return (
-    <div className={containerVariants({ layout })}>
+    <div className={cn(containerVariants({ layout }), className)}>
       {preHeading && (
         <div className={preHeadingVariants({ textColor })}>{preHeading}</div>
       )}
