@@ -11,7 +11,7 @@ const Card = ({
     Completed: "bg-green-200 text-drupal-green",
   };
   return (
-    <div className="w-full max-w-md rounded-lg bg-primary text-white shadow-sm transition-all duration-300 hover:shadow-lg">
+    <div className="w-full max-w-md rounded-lg bg-drupal-blue text-white shadow-sm transition-all duration-300 hover:shadow-lg">
       <div className="flex flex-col space-y-1 p-6">
         <div className="flex w-full items-start justify-between">
           <div className="space-y-2">
@@ -24,7 +24,7 @@ const Card = ({
           </div>
           <a
             href={link}
-            className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-accent text-sm font-medium whitespace-nowrap text-drupal-dark-navy transition-colors hover:bg-secondary"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-drupal-gray-mildest text-sm font-medium whitespace-nowrap text-drupal-dark-navy transition-colors hover:bg-drupal-gray-milder"
             role="link"
             target="_blank"
             rel="noopener noreferrer"

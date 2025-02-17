@@ -24,8 +24,4 @@
   --color-drupal-gray-milder: #cfd4dd;
   --color-drupal-gray-mildest: #f8f9fc;
   --color-drupal-gray-disabled: #e7ebf3;
-
-  --color-primary: var(--color-drupal-blue);
-  --color-secondary: var(--color-drupal-gray-milder);
-  --color-accent: var(--color-drupal-gray-mildest);
 }
