@@ -1,4 +1,3 @@
-import imagePlaceholder from "../assets/images/card-placeholder.png";
 import FeatureCard from "./feature-card.jsx";
 
 const meta = {
@@ -26,7 +25,6 @@ export const Default = {
     textColor: "Dark",
     linkLabel: "Learn More",
     link: "#",
-    image: imagePlaceholder,
     backgroundColor: "#F1F5F9",
     backgroundColorOnHover: "#E2E8F0",
   },
