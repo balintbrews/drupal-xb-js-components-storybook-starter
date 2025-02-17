@@ -43,10 +43,14 @@ const Heading = ({
   const Heading = headingElement;
   return (
     <div className={containerVariants({ layout })}>
-      <div className={preHeadingVariants({ textColor })}>{preHeading}</div>
-      <Heading className={headingVariants({ textColor, headingSize })}>
-        {heading}
-      </Heading>
+      {preHeading && (
+        <div className={preHeadingVariants({ textColor })}>{preHeading}</div>
+      )}
+      {heading && (
+        <Heading className={headingVariants({ textColor, headingSize })}>
+          {heading}
+        </Heading>
+      )}
     </div>
   );
 };
