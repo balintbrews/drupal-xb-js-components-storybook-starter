@@ -115,7 +115,7 @@ const Hero = ({
             )}
           </div>
         </div>
-        <div className="flex max-w-xl">
+        <div className="flex max-w-3xl">
           <img
             src={image}
             alt="Hero featured image"
