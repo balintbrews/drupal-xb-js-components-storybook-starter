@@ -1,23 +1,35 @@
-// import { cva } from "class-variance-authority";
+import { cva } from "class-variance-authority";
 import PropTypes from "prop-types";
+import Heading from "./heading";
 
-import Heading from "./heading.jsx";
+const heroLayout = cva("mx-auto flex w-full max-w-[1360px]", {
+  variants: {
+    layout: {
+      leftAligned: "items-center justify-between",
+      centered: "flex-col items-center justify-center text-center",
+    },
+  },
+  defaultVariants: {
+    layout: "leftAligned",
+  },
+});
 
-// const heroVariants = cva("mx-auto flex w-full max-w-[1360px]", {
-//   variants: {
-//     layout: {
-//       leftAligned: "items-center justify-between",
-//       centered: "xxx",
-//     },
-//   },
-//   defaultVariants: {
-//     intent: "primary",
-//     spacing: "relaxed",
-//   },
-// });
+const buttonLayout = cva("", {
+  variants: {
+    buttonStyle: {
+      solid:
+        "inline-flex items-center gap-x-2 rounded-lg border border-transparent bg-blue-600 px-4 py-3 text-sm font-medium text-white hover:bg-blue-700 focus:bg-blue-700 focus:outline-none disabled:pointer-events-none disabled:opacity-50",
+      outline:
+        "inline-flex items-center gap-x-2 rounded-lg border border-blue-600 px-4 py-3 text-sm font-medium text-blue-600 hover:border-blue-600 hover:text-blue-600 focus:border-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:text-neutral-400 dark:hover:border-blue-600 dark:hover:text-blue-500 dark:focus:border-blue-600 dark:focus:text-blue-500",
+    },
+  },
+  defaultVariants: {
+    buttonStyle: "solid",
+  },
+});
 
 const Hero = ({
-  // layout,
+  layout,
   preHeading,
   heading,
   headingSize = "Large",
@@ -26,10 +38,10 @@ const Hero = ({
   text,
   button1Label,
   button1Link,
-  // button1Style,
+  button1Style,
   button2Label,
   button2Link,
-  // button2Style,
+  button2Style,
   // image,
   backgroundImage,
   // darkenImage,
@@ -40,8 +52,8 @@ const Hero = ({
       className="align-center flex h-[672px] w-full justify-start bg-cover bg-center bg-no-repeat px-32"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="mx-auto flex w-full max-w-[1360px] items-center justify-between">
-        <div className="flex max-w-xl flex-col items-start justify-start gap-4">
+      <div className={heroLayout({ layout })}>
+        <div className={`flex max-w-xl flex-col items-start justify-start gap-4 ${layout === "centered" ? "items-center" : "items-start"}`}>
           <div className="mb-4">
             <Heading
               heading={heading}
@@ -51,12 +63,13 @@ const Hero = ({
               headingElement={headingElement}
             />
           </div>
+
           {text && <p className="mb-4 text-lg text-slate-950">{text}</p>}
           <div className="flex gap-4">
             {button1Label && (
               <a
                 href={button1Link}
-                className="inline-flex items-center gap-x-2 rounded-lg border border-transparent bg-blue-600 px-4 py-3 text-sm font-medium text-white hover:bg-blue-700 focus:bg-blue-700 focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                className={buttonLayout({ buttonStyle: button1Style })}
               >
                 {button1Label}
                 <svg
@@ -78,7 +91,7 @@ const Hero = ({
             {button2Label && (
               <a
                 href={button2Link}
-                className="inline-flex items-center gap-x-2 rounded-lg border border-blue-600 px-4 py-3 text-sm font-medium text-blue-600 hover:border-blue-600 hover:text-blue-600 focus:border-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:text-neutral-400 dark:hover:border-blue-600 dark:hover:text-blue-500 dark:focus:border-blue-600 dark:focus:text-blue-500"
+                className={buttonLayout({ buttonStyle: button2Style })}
               >
                 {button2Label}
                 <svg
@@ -124,7 +137,7 @@ Hero.propTypes = {
 };
 
 Hero.defaultProps = {
-  layout: "",
+  layout: PropTypes.oneOf(["leftAligned", "centered"]),
   preHeading: "",
   heading: "",
   headingSize: "",

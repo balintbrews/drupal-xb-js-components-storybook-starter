@@ -3,18 +3,34 @@ import Hero from "./hero";
 export default {
   title: "Sections/Hero",
   component: Hero,
+  argTypes: {
+    layout: {
+      control: "select",
+      options: ["leftAligned", "centered"],
+    },
+  },
 };
 
 const Template = (args) => <Hero {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  preHeading: "Welcome to Our Website",
-  heading: "Your Adventure Starts Here",
-  text: "Explore the world with us. Plan your next trip and get amazing deals on our tours.",
+  layout: "leftAligned",
+  preHeading: "Mission",
+  heading: "This space deserves a hero.",
+  headingSize: "4xl",
+  text: "This is a space to welcome visitors to the site. Grab their attention with copy that clearly states what the site is about.",
+  textColor: "text-white",
   button1Label: "Get Started",
   button1Link: "#get-started",
+  button1Style: "solid",
   button2Label: "Learn More",
   button2Link: "#learn-more",
-  backgroundImage: "path-to-your-image.jpg",
+  button2Style: "outline",
+  image:
+    "https://github.com/balintbrews/drupal-xb-js-components-storybook-starter/blob/main/src/assets/hero-placeholder-light.png?raw=true",
+  backgroundImage:
+    "https://github.com/balintbrews/drupal-xb-js-components-storybook-starter/blob/main/src/assets/hero-placeholder-light.png?raw=true",
+  darkenImage: "darken-25",
+  backgroundColor: "bg-blue-600",
 };
