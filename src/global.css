@@ -25,8 +25,18 @@
   --color-drupal-gray-mildest: #f8f9fc;
   --color-drupal-gray-disabled: #e7ebf3;
 
-  --color-primary: #1d4ed8;
-  --color-primary-light: #94A3B8;
+  --color-primary-100: var(--color-blue-100);
+  --color-primary-200: var(--color-blue-200);
+  --color-primary-300: var(--color-blue-300);
+  --color-primary-400: var(--color-blue-400);
+  --color-primary-500: var(--color-blue-500);
+  --color-primary-600: var(--color-blue-600);
+  --color-primary-700: var(--color-blue-700);
+  --color-primary-800: var(--color-blue-800);
+  --color-primary-900: var(--color-blue-900);
+
+  --color-primary: var(--color-blue-600);
+  --color-primary-light: var(--color-slate-400);
 }
 
 html {
