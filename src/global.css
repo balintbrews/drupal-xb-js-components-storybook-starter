@@ -28,3 +28,7 @@
   --color-primary: #1d4ed8;
   --color-primary-light: #94A3B8;
 }
+
+html {
+  @apply text-slate-950;
+}
