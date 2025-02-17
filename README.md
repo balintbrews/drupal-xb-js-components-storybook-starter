@@ -42,13 +42,9 @@ by using [SWC](https://swc.rs) and [Tailwind CSS v4](https://tailwindcss.com).
     a requirement in XB
   - Disables the error for missing prop validation, which might be better suited
     for the intended target audience of XB
-- [Husky](https://typicode.github.io/husky) for Git hooks:
-  - Pre-commit: Linting and formatting staged files using
-    [`lint-staged`](https://www.npmjs.com/package/lint-staged)
-  - Pre-commit: Validating commit messages against
-    [the Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0)
-    using [`commitlint`](https://commitlint.js.org) (e.g. run `npx git-cz` to
-    commit, or delete `.husky/commit-msg` if you don't want this)
+- Pre-commit hook with [Husky](https://typicode.github.io/husky) for linting and
+  formatting staged files using
+  [`lint-staged`](https://www.npmjs.com/package/lint-staged)
 - [GitHub Actions](https://github.com/features/actions) workflows:
   - Static code checks
   - Validating PR titles against
