@@ -1,6 +1,8 @@
 // import { cva } from "class-variance-authority";
 import PropTypes from "prop-types";
 
+import Heading from "./heading.jsx";
+
 // const heroVariants = cva("mx-auto flex w-full max-w-[1360px]", {
 //   variants: {
 //     layout: {
@@ -18,7 +20,7 @@ const Hero = ({
   // layout,
   preHeading,
   heading,
-  // headingSize,
+  headingSize,
   text,
   // textColor,
   button1Label,
@@ -39,14 +41,13 @@ const Hero = ({
     >
       <div className="mx-auto flex w-full max-w-[1360px] items-center justify-between">
         <div className="flex max-w-xl flex-col items-start justify-start gap-4">
-          {preHeading && (
-            <div className="text-lg font-bold text-blue-700">{preHeading}</div>
-          )}
-          {heading && (
-            <h1 className="mb-4 text-6xl font-bold text-slate-950">
-              {heading}
-            </h1>
-          )}
+          <div className="mb-4">
+            <Heading
+              heading={heading}
+              preHeading={preHeading}
+              headingSize={headingSize}
+            />
+          </div>
           {text && <p className="mb-4 text-lg text-slate-950">{text}</p>}
           <div className="flex gap-4">
             {button1Label && (
