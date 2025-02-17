@@ -14,7 +14,7 @@ const containerVariants = cva("dark flex w-full flex-col", {
 const preHeadingVariants = cva("mb-4 text-lg font-bold", {
   variants: {
     textColor: {
-      Dark: "text-primary",
+      Dark: "text-blue-700",
       Light: "text-primary-light",
     },
   },

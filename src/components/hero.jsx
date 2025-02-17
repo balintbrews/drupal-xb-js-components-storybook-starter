@@ -1,5 +1,6 @@
 import { cva } from "class-variance-authority";
 import PropTypes from "prop-types";
+
 import Heading from "./heading";
 
 const heroLayout = cva("mx-auto flex w-full max-w-[1360px]", {
@@ -42,7 +43,7 @@ const Hero = ({
   button2Label,
   button2Link,
   button2Style,
-  // image,
+  image,
   backgroundImage,
   // darkenImage,
   // backgroundColor,
@@ -53,7 +54,9 @@ const Hero = ({
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className={heroLayout({ layout })}>
-        <div className={`flex max-w-xl flex-col items-start justify-start gap-4 ${layout === "centered" ? "items-center" : "items-start"}`}>
+        <div
+          className={`flex max-w-xl flex-col items-start justify-start gap-4 ${layout === "centered" ? "items-center" : "items-start"}`}
+        >
           <div className="mb-4">
             <Heading
               heading={heading}
@@ -111,6 +114,13 @@ const Hero = ({
               </a>
             )}
           </div>
+        </div>
+        <div className="flex max-w-xl">
+          <img
+            src={image}
+            alt="Hero featured image"
+            className="max-width-full w-full"
+          />
         </div>
       </div>
     </div>
