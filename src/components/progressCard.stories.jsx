@@ -1,8 +1,8 @@
-import Card from "./card";
+import ProgressCard from "./progressCard.jsx";
 
 const meta = {
-  title: "Card",
-  component: Card,
+  title: "Progress Card",
+  component: ProgressCard,
   argTypes: {
     status: {
       control: "select",

@@ -1,7 +1,7 @@
 import Heading from "./heading";
 
 const meta = {
-  title: "Heading",
+  title: "Components/Heading",
   component: Heading,
   argTypes: {
     layout: {

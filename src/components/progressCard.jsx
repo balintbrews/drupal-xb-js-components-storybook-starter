@@ -1,4 +1,4 @@
-const Card = ({
+const ProgressCard = ({
   title = "Project",
   link = "#",
   status = "Not Started",
@@ -73,5 +73,5 @@ const Card = ({
   );
 };
 
-Card.displayName = "Card";
-export default Card;
+ProgressCard.displayName = "Card";
+export default ProgressCard;
