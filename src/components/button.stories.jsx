@@ -16,21 +16,24 @@ export default meta;
 export const Solid = {
   args: {
     variant: "solid",
-    children: "Button",
+    children: "Get started",
+    link: "#",
   },
 };
 
 export const OutlineDark = {
   args: {
     variant: "outlineDark",
-    children: "Button",
+    children: "Learn more",
+    link: "#",
   },
 };
 
 export const OutlineLight = {
   args: {
     variant: "outlineLight",
-    children: "Button",
+    children: "Learn more",
+    link: "#",
   },
   decorators: [
     (Story) => (
@@ -44,6 +47,7 @@ export const OutlineLight = {
 export const Ghost = {
   args: {
     variant: "ghost",
-    children: "Button",
+    children: "Learn more",
+    link: "#",
   },
 };
