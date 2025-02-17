@@ -6,7 +6,7 @@ const meta = {
   argTypes: {
     variant: {
       control: "select",
-      options: ["solid", "outlineDark", "outlineLight", "ghost"],
+      options: ["solid", "outlineDark", "outlineLight", "ghost", "link"],
     },
   },
 };
@@ -47,6 +47,14 @@ export const OutlineLight = {
 export const Ghost = {
   args: {
     variant: "ghost",
+    children: "Learn more",
+    link: "#",
+  },
+};
+
+export const Link = {
+  args: {
+    variant: "link",
     children: "Learn more",
     link: "#",
   },

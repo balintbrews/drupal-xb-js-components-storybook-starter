@@ -1,6 +1,7 @@
 import { cva } from "class-variance-authority";
 
 import { cn } from "../lib/utils";
+import Button from "./button";
 
 const cardVariants = cva(
   "flex w-full max-w-md flex-col items-center gap-4 rounded-2xl pb-6 leading-[normal]",
@@ -66,12 +67,9 @@ const Card = ({
           )}
           {text && <p className="mb-4 leading-6">{text}</p>}
           {link && linkLabel && (
-            <a
-              href={link}
-              className="text-sm leading-5 font-semibold text-blue-600"
-            >
+            <Button variant="link" link={link}>
               {linkLabel}
-            </a>
+            </Button>
           )}
         </div>
       </div>

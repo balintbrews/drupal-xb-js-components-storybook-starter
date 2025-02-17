@@ -14,6 +14,7 @@ const buttonVariants = cva(
           "border border-white text-white hover:border-neutral-300 hover:text-neutral-300 focus:border-neutral-300 focus:text-neutral-300",
         ghost:
           "text-primary-600 hover:bg-primary-100 hover:text-primary-800 focus:bg-primary-100 focus:text-primary-800 focus:outline-none",
+        link: "p-0 text-primary-600 hover:text-primary-800 focus:text-primary-800",
       },
     },
     defaultVariants: {
@@ -22,7 +23,12 @@ const buttonVariants = cva(
   },
 );
 
-const Button = ({ className, variant, children = "Button", link = "#" }) => {
+const Button = ({
+  children = "Button",
+  link = "#",
+  variant,
+  className = "",
+}) => {
   return (
     <a className={cn(buttonVariants({ variant, className }))} href={link}>
       <>
