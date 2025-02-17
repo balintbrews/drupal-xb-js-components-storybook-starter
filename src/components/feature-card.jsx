@@ -1,6 +1,7 @@
 import { cva } from "class-variance-authority";
 
 import { cn } from "../lib/utils";
+import Button from "./button";
 
 const cardVariants = cva(
   "flex w-full max-w-md flex-col items-start gap-4 rounded-2xl p-6 leading-[normal]",
@@ -54,12 +55,9 @@ const FeatureCard = ({
           </div>
           <Heading className="mb-4 text-lg font-bold">{heading}</Heading>
           <p className="mb-4 leading-6">{text}</p>
-          <a
-            href={link}
-            className="text-sm leading-5 font-semibold text-blue-600"
-          >
+          <Button link={link} variant="link">
             {linkLabel}
-          </a>
+          </Button>
         </div>
       </div>
     </>
@@ -77,38 +75,38 @@ const FeatureIcon = () => (
     <path
       d="M8 2H4C2.89543 2 2 2.89543 2 4V8C2 9.10457 2.89543 10 4 10H8C9.10457 10 10 9.10457 10 8V4C10 2.89543 9.10457 2 8 2Z"
       stroke="white"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M14 2C15.1 2 16 2.9 16 4V8C16 9.1 15.1 10 14 10"
       stroke="white"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M20 2C21.1 2 22 2.9 22 4V8C22 9.1 21.1 10 20 10"
       stroke="white"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M10 18H5C3.3 18 2 16.7 2 15V14"
       stroke="white"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M7 21L10 18L7 15"
       stroke="white"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M20 14H16C14.8954 14 14 14.8954 14 16V20C14 21.1046 14.8954 22 16 22H20C21.1046 22 22 21.1046 22 20V16C22 14.8954 21.1046 14 20 14Z"
       stroke="white"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
