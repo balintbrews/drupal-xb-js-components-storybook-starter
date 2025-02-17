@@ -1,6 +1,6 @@
 import { cva } from "class-variance-authority";
 
-const containerVariants = cva("flex w-full flex-col", {
+const containerVariants = cva("dark flex w-full flex-col", {
   variants: {
     layout: {
       "Left aligned": "",
@@ -12,8 +12,8 @@ const containerVariants = cva("flex w-full flex-col", {
 const preHeadingVariants = cva("mb-4 text-lg font-bold", {
   variants: {
     textColor: {
-      Dark: "text-blue-700",
-      Light: "text-blue-300",
+      Dark: "text-primary",
+      Light: "text-primary-light",
     },
   },
 });
@@ -25,8 +25,8 @@ const headingVariants = cva("font-bold", {
       Light: "text-white",
     },
     headingSize: {
-      Large: "text-4xl",
-      Medium: "text-3xl",
+      Large: "text-6xl",
+      Medium: "text-4xl",
       Small: "text-2xl",
     },
   },

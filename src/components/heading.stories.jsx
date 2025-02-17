@@ -31,7 +31,7 @@ export const Default = {
     preHeading: "Mission",
     heading: "Our purpose and values.",
     headingElement: "h2",
-    headingSize: "Large",
+    headingSize: "Medium",
     textColor: "Dark",
   },
 };
