@@ -7,8 +7,12 @@ const cardVariants = cva(
   {
     variants: {
       textColor: {
-        Dark: "",
+        Dark: null,
         Light: "text-white",
+      },
+      image: {
+        true: null,
+        false: "pt-8",
       },
     },
   },
@@ -17,50 +21,58 @@ const cardVariants = cva(
 const Card = ({
   image,
   heading,
-  headingElement,
+  headingElement = "h2",
   text,
   textColor,
   linkLabel,
   link,
-  backgroundColor,
-  backgroundColorOnHover,
+  backgroundColor = "#ffffff",
+  backgroundColorOnHover = "#E2E8F0",
   className,
 }) => {
   const Heading = headingElement;
+  const cardBackgroundClassName = `card-${backgroundColor.substring(1)}`;
+  const cardBackgroundClassNameOnHover = `card-${backgroundColorOnHover.substring(1)}`;
 
   return (
     <>
       <style>
         {`
-          .card-${backgroundColor.substring(1)} {
+          .${cardBackgroundClassName} {
             background-color: ${backgroundColor};
           } 
-          .card-hover-${backgroundColorOnHover.substring(1)}:hover {
+          .${cardBackgroundClassNameOnHover}:hover {
             background-color: ${backgroundColorOnHover};
           }
         `}
       </style>
       <div
         className={cn(
-          cardVariants({ textColor }),
-          `card-hover-${backgroundColorOnHover.substring(1)}`,
-          `card-${backgroundColor.substring(1)}`,
+          cardVariants({ textColor, image: !!image }),
+          cardBackgroundClassName,
+          cardBackgroundClassNameOnHover,
           className,
         )}
       >
-        <img
-          className="w-full rounded-2xl object-cover object-center"
-          src={image}
-        />
+        {image && (
+          <img
+            className="w-full rounded-2xl object-cover object-center"
+            src={image}
+          />
+        )}
         <div className="px-6 pt-2">
-          <Heading className="mb-4 text-lg font-bold">{heading}</Heading>
-          <p className="mb-4 leading-6">{text}</p>
-          <a
-            href={link}
-            className="text-sm leading-5 font-semibold text-blue-600"
-          >
-            {linkLabel}
-          </a>
+          {heading && (
+            <Heading className="mb-4 text-lg font-bold">{heading}</Heading>
+          )}
+          {text && <p className="mb-4 leading-6">{text}</p>}
+          {link && linkLabel && (
+            <a
+              href={link}
+              className="text-sm leading-5 font-semibold text-blue-600"
+            >
+              {linkLabel}
+            </a>
+          )}
         </div>
       </div>
     </>
