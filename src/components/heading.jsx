@@ -1,36 +1,56 @@
+import { cva } from "class-variance-authority";
+
+const containerVariants = cva("dark flex w-full flex-col", {
+  variants: {
+    layout: {
+      "Left aligned": "",
+      "Center aligned": "items-center",
+    },
+  },
+});
+
+const preHeadingVariants = cva("mb-4 text-lg font-bold", {
+  variants: {
+    textColor: {
+      Dark: "text-primary",
+      Light: "text-primary-light",
+    },
+  },
+});
+
+const headingVariants = cva("font-bold", {
+  variants: {
+    textColor: {
+      Dark: "text-black",
+      Light: "text-white",
+    },
+    headingSize: {
+      Large: "text-6xl",
+      Medium: "text-4xl",
+      Small: "text-2xl",
+    },
+  },
+});
+
 const Heading = ({
   preHeading,
   heading,
   headingElement = "h2",
   layout = "Left aligned",
+  headingSize = "Large",
   textColor = "Dark",
 }) => {
   const Heading = headingElement;
-  const colors = {
-    headingText: {
-      Dark: "text-slate-950",
-      Light: "text-white",
-    },
-    preHeadingText: {
-      Dark: "text-blue-700",
-      Light: "text-blue-300",
-    },
-  };
-
   return (
-    <div
-      className={`flex w-full flex-col ${layout === "Center aligned" ? "text-center" : ""}`}
-    >
-      <div
-        className={`mb-4 text-lg leading-[normal] font-bold ${colors.preHeadingText[textColor]}`}
-      >
-        {preHeading}
-      </div>
-      <Heading
-        className={`text-4xl leading-[normal] font-bold ${colors.headingText[textColor]}`}
-      >
-        {heading}
-      </Heading>
+    <div className={containerVariants({ layout })}>
+      {preHeading && (
+        <div className={preHeadingVariants({ textColor })}>{preHeading}</div>
+      )}
+      {heading && (
+        <Heading className={headingVariants({ textColor, headingSize })}>
+          {heading}
+        </Heading>
+      )}
     </div>
   );
 };
