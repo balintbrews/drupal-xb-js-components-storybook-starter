@@ -8,6 +8,10 @@ const meta = {
       options: ["Left aligned", "Center aligned"],
       control: { type: "select" },
     },
+    headingElement: {
+      options: ["h1", "h2", "h3", "h4", "h5", "h6"],
+      control: { type: "select" },
+    },
     headingSize: {
       options: ["Large", "Medium", "Small"],
       control: { type: "select" },
