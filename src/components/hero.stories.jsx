@@ -31,6 +31,6 @@ Default.args = {
     "https://github.com/balintbrews/drupal-xb-js-components-storybook-starter/blob/main/src/assets/images/placeholder.png?raw=true",
   backgroundImage:
     "https://github.com/balintbrews/drupal-xb-js-components-storybook-starter/blob/main/src/assets/images/hero-background-placeholder-light.png?raw=true",
-  darkenImage: "darken-25",
+  darkenImage: true,
   backgroundColor: "bg-blue-600",
 };
