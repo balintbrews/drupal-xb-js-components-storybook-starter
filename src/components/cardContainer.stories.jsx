@@ -23,7 +23,7 @@ const meta = {
       control: { type: "select" },
     },
     cardLayout: {
-      options: ["3 columns", "4 columns"],
+      options: ["2 columns", "3 columns", "4 columns", "6 columns"],
       control: { type: "select" },
     },
   },
