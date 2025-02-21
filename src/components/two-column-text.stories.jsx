@@ -1,8 +1,8 @@
-import Hero from "./hero";
+import TwoColumnText from "./two-column-text";
 
 export default {
-  title: "Sections/Hero",
-  component: Hero,
+  title: "Components/Two Column Text and IMG",
+  component: TwoColumnText,
   argTypes: {
     layout: {
       control: "select",
@@ -11,7 +11,7 @@ export default {
   },
 };
 
-const Template = (args) => <Hero {...args} />;
+const Template = (args) => <TwoColumnText {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -29,8 +29,4 @@ Default.args = {
   button2Style: "Outline",
   image:
     "https://github.com/balintbrews/drupal-xb-js-components-storybook-starter/blob/main/src/assets/images/placeholder.png?raw=true",
-  backgroundImage:
-    "https://github.com/balintbrews/drupal-xb-js-components-storybook-starter/blob/main/src/assets/images/hero-background-placeholder-light.png?raw=true",
-  darkenImage: false,
-  backgroundColor: "bg-blue-600",
 };
