@@ -1,5 +1,9 @@
+import imagePlaceholder from "../assets/images/card-placeholder.png";
 import Blockquote from "./blockquote.jsx";
+import Card from "./card.jsx";
+import CardContainer from "./cardContainer.jsx";
 import Heading from "./heading.jsx";
+import Hero from "./hero.jsx";
 import Image from "./image.jsx";
 import Page from "./page";
 import Section from "./section.jsx";
@@ -12,7 +16,51 @@ const meta = {
 
 export default meta;
 
-export const Default = {
+export const HomePage = {
+  args: {},
+  render: (args) => (
+    <Page {...args}>
+      <Hero
+        layout="leftAligned"
+        preHeading="Mission"
+        heading="This space deserves a hero."
+        text="This is a space to welcome visitors to the site. Grab their attention with copy that clearly states what the site is about."
+        headingElement="h1"
+        button1Label="Get Started"
+        button1Link="#get-started"
+        button1Style="Solid"
+        image="https://github.com/balintbrews/drupal-xb-js-components-storybook-starter/blob/main/src/assets/images/placeholder.png?raw=true"
+        backgroundImage="https://github.com/balintbrews/drupal-xb-js-components-storybook-starter/blob/main/src/assets/images/hero-background-placeholder-light.png?raw=true"
+        darkenImage="darken-25"
+        backgroundColor="bg-blue-600"
+      />
+      <CardContainer
+        heading="What we offer."
+        preHeading="Featured services"
+        headingLevel="h2"
+        layout="Center aligned"
+        cardLayout="3 columns"
+      >
+        <Card
+          heading="Engaging title that represents the content."
+          text="Some quick example text to build on the card title and make up the bulk of the card's content."
+          image={imagePlaceholder}
+        />
+        <Card
+          heading="Engaging title that represents the content."
+          text="Some quick example text to build on the card title and make up the bulk of the card's content."
+          image={imagePlaceholder}
+        />
+        <Card
+          heading="Engaging title that represents the content."
+          text="Some quick example text to build on the card title and make up the bulk of the card's content."
+          image={imagePlaceholder}
+        />
+      </CardContainer>
+    </Page>
+  ),
+};
+export const AboutUs = {
   args: {},
   render: (args) => (
     <Page {...args}>

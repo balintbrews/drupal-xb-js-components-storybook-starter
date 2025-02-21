@@ -32,7 +32,7 @@ const CardContainer = ({
   children,
 }) => {
   return (
-    <div className="flex flex-col items-center gap-16">
+    <div className="my-18 flex flex-col items-center gap-16 md:my-24">
       <Heading
         layout={layout}
         preHeading={preHeading}
