@@ -17,14 +17,14 @@ const cardVariants = cva(
 
 const FeatureCard = ({
   // icon,
-  heading,
-  headingElement,
-  text,
-  textColor,
-  linkLabel,
-  link,
-  backgroundColor,
-  backgroundColorOnHover,
+  heading = "Card title",
+  headingElement = "h2",
+  text = "Some quick example text to build on the card title and make up the bulk of the card's content.",
+  textColor = "Dark",
+  linkLabel = "Learn more",
+  link = "#",
+  backgroundColor = "#FFFFFF",
+  backgroundColorOnHover = "#F1F5F9",
   className,
 }) => {
   const Heading = headingElement;
