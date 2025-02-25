@@ -1,10 +1,14 @@
 import imagePlaceholder from "../assets/images/card-placeholder.png";
+import drupalLogo from "../assets/images/logo.svg";
 import Blockquote from "./blockquote.jsx";
+import Branding from "./branding.jsx";
 import Card from "./card.jsx";
 import CardContainer from "./cardContainer.jsx";
+import Header from "./header.jsx";
 import Heading from "./heading.jsx";
 import Hero from "./hero.jsx";
 import Image from "./image.jsx";
+import NavigationMenu from "./navigation-menu.jsx";
 import Page from "./page";
 import Section from "./section.jsx";
 import Text from "./text.jsx";
@@ -16,10 +20,71 @@ const meta = {
 
 export default meta;
 
+const logo = <Branding homeUrl="#" logo={drupalLogo} />;
+const menu = (
+  <NavigationMenu
+    menuId="main-menu"
+    menuLabel="Main Menu"
+    links={[
+      {
+        key: "front_page",
+        title: "Home",
+        url: "#",
+        isExpanded: false,
+        isCollapsed: false,
+        inActiveTrail: false,
+      },
+      {
+        key: "about",
+        title: "About",
+        url: "#",
+        isExpanded: false,
+        isCollapsed: false,
+        inActiveTrail: false,
+        submenu: [
+          {
+            key: "team",
+            title: "Home",
+            url: "#",
+            isExpanded: false,
+            isCollapsed: false,
+            inActiveTrail: false,
+          },
+          {
+            key: "values",
+            title: "Values",
+            url: "#",
+            isExpanded: false,
+            isCollapsed: false,
+            inActiveTrail: false,
+          },
+          {
+            key: "history",
+            title: "History",
+            url: "#",
+            isExpanded: false,
+            isCollapsed: false,
+            inActiveTrail: false,
+          },
+        ],
+      },
+      {
+        key: "contact",
+        title: "Contact",
+        url: "#",
+        isExpanded: false,
+        isCollapsed: false,
+        inActiveTrail: false,
+      },
+    ]}
+  />
+);
+
 export const HomePage = {
   args: {},
   render: (args) => (
     <Page {...args}>
+      <Header logo={logo} menu={menu} />
       <Hero
         layout="leftAligned"
         preHeading="Mission"
@@ -64,6 +129,7 @@ export const AboutUs = {
   args: {},
   render: (args) => (
     <Page {...args}>
+      <Header logo={logo} menu={menu} />
       <Section>
         <Heading
           heading="Who we are."

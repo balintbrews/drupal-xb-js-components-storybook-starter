@@ -1,18 +1,13 @@
+/* eslint-disable-next-line no-unused-vars */
 const Branding = ({ homeUrl, logo, siteName, siteSlogan }) => {
   return (
-    <div>
+    <>
       {logo && (
-        <a href={homeUrl} rel="home">
-          <img src={logo} alt="Home" fetchPriority="high" />
+        <a href={homeUrl} aria-label={siteName} className="max-h-full">
+          <img src={logo} alt="" fetchPriority="high" className="max-h-full" />
         </a>
       )}
-      {siteName && (
-        <a href={homeUrl} rel="home">
-          {siteName}
-        </a>
-      )}
-      {siteSlogan}
-    </div>
+    </>
   );
 };
 

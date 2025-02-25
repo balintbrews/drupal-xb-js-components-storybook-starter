@@ -1,17 +1,21 @@
-import NavigationMenu from "./navigation-menu";
+import drupalLogo from "../assets/images/logo.svg";
+import Branding from "./branding.jsx";
+import Header from "./header";
+import NavigationMenu from "./navigation-menu.jsx";
 
 const meta = {
-  title: "Overrides/NavigationMenu",
-  component: NavigationMenu,
+  title: "Components/Header",
+  component: Header,
 };
 
 export default meta;
 
-export const Default = {
-  args: {
-    id: "main-menu",
-    label: "Main Menu",
-    links: [
+const logo = <Branding homeUrl="#" logo={drupalLogo} />;
+const menu = (
+  <NavigationMenu
+    menuId="main-menu"
+    menuLabel="Main Menu"
+    links={[
       {
         key: "front_page",
         title: "Home",
@@ -62,6 +66,10 @@ export const Default = {
         isCollapsed: false,
         inActiveTrail: false,
       },
-    ],
-  },
+    ]}
+  />
+);
+export const Default = {
+  args: {},
+  render: () => <Header logo={logo} menu={menu} />,
 };

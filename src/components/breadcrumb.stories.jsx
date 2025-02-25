@@ -12,7 +12,7 @@ export const Default = {
     links: [
       { key: "1", text: "Home", url: "#" },
       { key: "2", text: "About", url: "#" },
-      { key: "3", text: "Contact", url: "#" },
+      { key: "3", text: "Contact" },
     ],
   },
 };
