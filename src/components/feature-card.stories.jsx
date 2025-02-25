@@ -1,9 +1,8 @@
-import imagePlaceholder from "../assets/images/card-placeholder.png";
-import Card from "./card.jsx";
+import FeatureCard from "./feature-card.jsx";
 
 const meta = {
-  title: "Components/Card",
-  component: Card,
+  title: "Components/FeatureCard",
+  component: FeatureCard,
   argTypes: {
     headingElement: {
       options: ["h1", "h2", "h3", "h4", "h5", "h6"],
@@ -26,8 +25,7 @@ export const Default = {
     textColor: "Dark",
     linkLabel: "Learn More",
     link: "#",
-    image: imagePlaceholder,
-    backgroundColor: "#ffffff",
+    backgroundColor: "#F1F5F9",
     backgroundColorOnHover: "#E2E8F0",
   },
 };
