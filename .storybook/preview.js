@@ -1,5 +1,5 @@
 import "@fontsource-variable/inter";
-import "../src/global.css";
+import "../src/index.css";
 
 const preview = {};
 
