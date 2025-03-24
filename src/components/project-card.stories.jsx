@@ -1,8 +1,8 @@
-import Card from "./card";
+import ProjectCard from "./project-card";
 
 const meta = {
-  title: "Card",
-  component: Card,
+  title: "Project Card",
+  component: ProjectCard,
   argTypes: {
     status: {
       control: "select",
