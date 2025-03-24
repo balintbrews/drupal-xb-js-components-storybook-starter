@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority";
 import PropTypes from "prop-types";
 
-const testimonialVariants = cva("mx-auto max-w-7xl px-4 sm:px-6 lg:px-8", {
+const testimonialVariants = cva("max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto", {
   variants: {
     intent: {
       primary: "bg-black",
@@ -21,8 +21,8 @@ const testimonialVariants = cva("mx-auto max-w-7xl px-4 sm:px-6 lg:px-8", {
 
 const Testimonial = ({ name, title, quote, intent, spacing }) => (
   <div className={testimonialVariants({ intent, spacing })}>
-    <div className="mx-auto max-w-4xl">
-      <blockquote className="mx-auto max-w-4xl">
+    <div className="max-w-4xl mx-auto">
+      <blockquote className="max-w-4xl mx-auto">
         <p className="mb-6 md:text-lg">
           <span className="font-semibold text-emerald-300">{name},</span>{" "}
           <span className="text-slate-400">{title}</span>
@@ -36,9 +36,9 @@ const Testimonial = ({ name, title, quote, intent, spacing }) => (
           <div className="border-neutral-700">
             <button
               type="button"
-              className="group inline-flex items-center gap-x-3 text-sm text-slate-400 focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+              className="group gap-x-3 text-sm text-slate-400 inline-flex items-center focus:outline-none disabled:pointer-events-none disabled:opacity-50"
             >
-              <span className="flex size-8 flex-col items-center justify-center rounded-full bg-white text-black group-hover:bg-emerald-400 group-focus:bg-emerald-400 md:size-10">
+              <span className="size-8 bg-white text-black group-hover:bg-emerald-400 group-focus:bg-emerald-400 md:size-10 flex flex-col items-center justify-center rounded-full">
                 <svg
                   className="size-5 shrink-0"
                   xmlns="http://www.w3.org/2000/svg"
