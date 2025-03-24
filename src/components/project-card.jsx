@@ -40,14 +40,12 @@ const ProjectCard = ({
         </div>
       </div>
       <div className="p-6 pt-0">
-        <div className="space-y-4">
-          <div className="space-y-2">
-            <div className="text-sm flex justify-between text-drupal-gray-mildest">
-              <span>Progress</span>
-              <span>{progress}%</span>
-            </div>
-            <ProgressBar progress={progress} />
+        <div className="space-y-2">
+          <div className="text-sm flex justify-between text-drupal-gray-mildest">
+            <span>Progress</span>
+            <span>{progress}%</span>
           </div>
+          <ProgressBar progress={progress} />
         </div>
       </div>
       {footer && (
@@ -71,15 +69,12 @@ const ProgressBar = ({ progress }) => (
   <div
     aria-valuemax="100"
     aria-valuemin="0"
+    aria-valuenow={progress}
     role="progressbar"
-    data-state="indeterminate"
-    data-max="100"
     className="h-2 relative w-full overflow-hidden rounded-full bg-drupal-light-blue"
   >
     <div
-      data-state="indeterminate"
-      data-max="100"
-      className="h-full w-full flex-1 border-r-3 border-drupal-red bg-drupal-yellow transition-all"
+      className="h-full w-full border-r-3 border-drupal-red bg-drupal-yellow transition-all"
       style={{ transform: `translateX(-${100 - progress}%)` }}
     ></div>
   </div>
