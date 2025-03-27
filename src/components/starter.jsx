@@ -1,27 +1,24 @@
-// You can create your own component using Preact and Tailwind CSS 4.
-// @see https://preactjs.com
-// @see https://tailwindcss.com
-// You can add CSS under the "CSS" and "Global CSS" tabs.
-// Add your Tailwind CSS 4 theme variables under "Global CSS".
+// Use Preact (https://preactjs.com) and Tailwind CSS 4 (https://tailwindcss.com).
+// Global CSS is added to all pages with a @theme directive.
+// Tailwind theme variables must be added in Global CSS.
 // @see https://tailwindcss.com/docs/theme.
-// The contents of global CSS will be added as a @theme directive.
-// Do not include `@import "tailwindcss"`.
+// Do not include @import "tailwindcss"!
 
-// For now, the following third party packages are available:
+// Available third party packages:
 // import { clsx } from 'clsx'
 // import { cva } from 'class-variance-authority'
 // import { twMerge } from 'tailwind-merge'
 //
-// cn() is a utility function XB bundles, you can use it to combine classes.
+// Combine classes with the cn() utility function.
 // @see https://git.drupalcode.org/project/experience_builder/-/blob/0.x/ui/lib/astro-hydration/src/lib/utils.ts
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
 
-const Greetings = ({
-  // You can create props under Component data. Their name will be camelCased.
-  // E.g. you can create a prop called "Title" (use the type, Text), and it will
-  // populate the following prop with the example value you add:
-  title = "Component name",
-  // Slots are also passed here as props.
+const MyComponent = ({
+  // List component props and slots here. To expose them on the UI, add them
+  // under "Component data".
+  // The camelCased prop/slot name must match the argument name here
+  // (eg. "Card Variant" → "cardVariant").
+  title = "My component",
 }) => {
   return (
     <div className="max-w-sm min-h-36 p-2 font-bold rounded-lg text-2xl relative mx-auto flex items-center justify-center bg-[#ffc423] text-[#12285f]">
@@ -31,7 +28,7 @@ const Greetings = ({
   );
 };
 
-export default Greetings;
+export default MyComponent;
 
 const ControlDots = ({ className }) => (
   <svg
