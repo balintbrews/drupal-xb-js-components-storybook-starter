@@ -1,4 +1,5 @@
-// Use Preact (https://preactjs.com) and Tailwind CSS 4 (https://tailwindcss.com).
+// Use React/Preact (https://preactjs.com) and Tailwind CSS 4
+// (https://tailwindcss.com).
 // Global CSS is added to all pages with a @theme directive.
 // Tailwind theme variables must be added in Global CSS.
 // @see https://tailwindcss.com/docs/theme.
